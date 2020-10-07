@@ -1,0 +1,43 @@
+@value makerBlack, makerWhite, selectColor from './../common/colors.css';
+
+.nav {
+  height: 6rem;
+  background-color: makerBlack;
+  display: flex;
+  align-items: center;
+
+  color: makerWhite;
+}
+.div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  padding: 0rem 3.5rem;
+  display: flex;
+}
+.right {
+  padding: 0rem 5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.img {
+  margin-right: 1.5rem;
+  width: 100px;
+  height: 52px;
+}
+.leftDiv {
+  display: flex;
+  padding: 0rem 0.6rem;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.leftDiv:hover,
+.right:hover {
+  color: selectColor;
+  cursor: pointer;
+}

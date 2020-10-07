@@ -1,0 +1,109 @@
+@value makerBlack, makerWhite, selectColor from '../../../common/colors.css';
+
+.h1tag {
+  color: makerWhite;
+  font-size: 2.5rem;
+  font-family: "nation nale demibold";
+}
+.ptag {
+  color: makerWhite;
+  font-size: 1.5rem;
+}
+.footer {
+  font-family: "nation nale bold";
+  font-weight: bold;
+  margin-top: 5rem;
+  color: makerWhite;
+}
+.body {
+  background-color: makerBlack;
+  height: 45rem;
+}
+.atag {
+  font-family: "nation nale bold";
+  display: inline-block;
+  margin-top: 3rem;
+  color: makerWhite;
+  transition: transform 250ms ease-in;
+}
+.atag:hover {
+  transform: scale(1.02);
+  border-bottom: 1px solid makerWhite;
+}
+.atag:link {
+  text-decoration: none;
+}
+.background {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.left {
+  height: 50%;
+}
+
+.leftdiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 3rem;
+  animation: fadein 5s 1;
+}
+.login {
+  width: 20%;
+  height: 10%;
+  background-color: selectColor;
+  border-radius: 0.2rem;
+  border: 1px solid selectColor;
+  color: makerBlack;
+  font-size: 1.5rem;
+  font-family: "nation nale demibold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftimg {
+  margin-top: 0.5rem;
+  width: 10rem;
+}
+.rightimg {
+  width: 33rem;
+  margin-right: 3rem;
+}
+.right {
+  /* animation: rotate 3s 1; */
+  animation-name: fadein, rotate;
+  animation-duration: 10s, 3s;
+}
+@keyframes slidein {
+  from {
+    transform: translateY(90%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(180deg) translateY(100%) scale(0.25);
+  }
+  /* 50% {
+    -webkit-transform: rotate(90deg) translateY(50%) scale(0.5);
+  } */
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0%) scale(1);
+  }
+}
