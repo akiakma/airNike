@@ -9,12 +9,7 @@
   color: makerWhite;
   font-size: 1.5rem;
 }
-.footer {
-  font-family: "nation nale bold";
-  font-weight: bold;
-  margin-top: 5rem;
-  color: makerWhite;
-}
+
 .body {
   background-color: makerBlack;
   height: 45rem;
@@ -51,19 +46,6 @@
   margin-left: 3rem;
   animation: fadein 5s 1;
 }
-.login {
-  width: 20%;
-  height: 10%;
-  background-color: selectColor;
-  border-radius: 0.2rem;
-  border: 1px solid selectColor;
-  color: makerBlack;
-  font-size: 1.5rem;
-  font-family: "nation nale demibold";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .leftimg {
   margin-top: 0.5rem;
@@ -74,9 +56,8 @@
   margin-right: 3rem;
 }
 .right {
-  /* animation: rotate 3s 1; */
-  animation-name: fadein, rotate;
-  animation-duration: 10s, 3s;
+  animation-name: fadein, slidein;
+  animation-duration: 10s, 4s;
 }
 @keyframes slidein {
   from {
@@ -93,17 +74,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(180deg) translateY(100%) scale(0.25);
-  }
-  /* 50% {
-    -webkit-transform: rotate(90deg) translateY(50%) scale(0.5);
-  } */
-  100% {
-    -webkit-transform: rotate(0deg) translateY(0%) scale(1);
   }
 }

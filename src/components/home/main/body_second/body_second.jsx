@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./body_sneakers.module.css";
+import styles from "./body_second.module.css";
 
-const BodySneakers = props => {
+const BodySecond = props => {
   return (
     <>
       <div className={styles.body}>
@@ -20,9 +20,10 @@ const BodySneakers = props => {
                 <a
                   className={styles.atag}
                   href="http://www.naver.com"
+                  // eslint-disable-next-line react/jsx-no-target-blank
                   target="_blank"
                 >
-                  > More information
+                  {">"} More information
                 </a>
               </div>
             </div>
@@ -40,4 +41,4 @@ const BodySneakers = props => {
   );
 };
 
-export default BodySneakers;
+export default BodySecond;

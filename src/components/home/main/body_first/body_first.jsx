@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./body_jordan.module.css";
+import styles from "./body_first.module.css";
 
-const BodyJordan = props => {
+const BodyFirst = props => {
   return (
     <>
       <div className={styles.body}>
@@ -16,17 +16,12 @@ const BodyJordan = props => {
                 <p className={styles.player}> - Kaepernick </p>
               </div>
               <div className={styles.login}>Log in</div>
-              <img
-                className={styles.leftimg}
-                src="./img/whiteswoosh.png"
-                alt=""
-              />
             </div>
           </div>
           <div className={styles.right}>
             <img
               className={styles.rightimg}
-              src="./img/airdior1.png"
+              src="./img/swooshnike.png"
               alt="airdior"
             />
           </div>
@@ -36,4 +31,4 @@ const BodyJordan = props => {
   );
 };
 
-export default BodyJordan;
+export default BodyFirst;

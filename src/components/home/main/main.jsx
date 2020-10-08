@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./main.module.css";
 import Nav from "../../nav/nav";
-import BodyJordan from "./body_jordan/body_jordan";
-import BodySneakers from "./body_sneakers/body_sneakers";
+
+import BodyFirst from "./body_first/body_first";
+import BodySecond from "./body_second/body_second";
 
 const Main = props => (
   <div className={styles.main}>
-    <Nav />
-    <BodyJordan />
-    <BodySneakers />
+    {/* <Nav />
+    <BodyFirst />
+    <BodySecond /> */}
   </div>
 );
 
