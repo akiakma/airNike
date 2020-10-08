@@ -1,0 +1,110 @@
+@value makerBlack, makerWhite, selectColor from '../../../common/colors.css';
+
+.body {
+  background-color: #0d0d0d;
+  height: 50rem;
+}
+.background {
+  background-image: url("https://tidal.com/_nuxt/img/playlists-bg.d1c7f65.jpg");
+  background-repeat: no-repeat;
+  background-position-x: 10rem;
+  background-position-y: 10rem;
+  background-size: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left {
+  /* animation: rotate 3s 1; */
+  margin-top: 10rem;
+}
+.leftimg1 {
+  width: 20rem;
+  margin-right: 0rem;
+  animation-name: fadein;
+  animation-duration: 5s;
+}
+.leftimg2 {
+  width: 20rem;
+  margin-right: 0rem;
+  animation-name: fadein;
+  animation-duration: 8s;
+}
+.leftimg3 {
+  width: 20rem;
+  margin-right: 0rem;
+  animation-name: fadein;
+  animation-duration: 11s;
+}
+.leftimg4 {
+  width: 18rem;
+  margin-right: 2.5rem;
+  animation-name: fadein;
+  animation-duration: 14s;
+}
+.leftimg5 {
+  width: 18rem;
+  margin-right: 2.5rem;
+  animation-name: fadein;
+  animation-duration: 18s;
+}
+.leftimg6 {
+  width: 18rem;
+  margin-right: 2.5rem;
+  animation-name: fadein;
+  animation-duration: 20s;
+}
+.right {
+  height: 50%;
+}
+.rightdiv {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 3rem;
+  animation: fadein 5s 1;
+}
+.ptag {
+  color: makerWhite;
+  font-size: 2rem;
+  font-family: "nation nale demibold";
+}
+.player {
+  font-family: nation nale bold;
+  color: yellow;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(90%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(180deg) translateY(100%) scale(0.25);
+  }
+  /* 50% {
+    -webkit-transform: rotate(90deg) translateY(50%) scale(0.5);
+  } */
+  100% {
+    -webkit-transform: rotate(0deg) translateY(0%) scale(1);
+  }
+}

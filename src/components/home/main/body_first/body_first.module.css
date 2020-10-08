@@ -7,7 +7,7 @@
 }
 .body {
   background-color: makerBlack;
-  height: 45rem;
+  height: 50rem;
 }
 .background {
   background-image: url("https://tidal.com/_nuxt/img/hero-bg.c7adb22.png");
@@ -32,23 +32,12 @@
   margin-left: 3rem;
   animation: fadein 5s 1;
 }
-.login {
-  width: 20%;
-  height: 10%;
-  background-color: selectColor;
-  border-radius: 0.2rem;
-  border: 1px solid selectColor;
-  color: makerBlack;
-  font-size: 1.5rem;
-  font-family: "nation nale demibold";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .player {
+  font-family: nation nale bold;
   color: makerWhite;
-  margin-top: 1.1rem;
-  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
 }
 .rightimg {
   width: 40rem;

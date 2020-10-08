@@ -9,19 +9,18 @@ const BodyFirst = props => {
           <div className={styles.left}>
             <div className={styles.leftdiv}>
               <div className={styles.leftdivchild}>
-                <p className={styles.ptag}>Believe in something.</p>
-                <p className={styles.ptag}>
-                  Even if it means sacrificing everything.
-                </p>
-                <p className={styles.player}> - Kaepernick </p>
+                <p className={styles.player}> PURPOSE MOVES US </p>
+                <p className={styles.ptag}>Our purpose is to unite the world</p>
+                <p className={styles.ptag}>through sport to create a healthy</p>
+                <p className={styles.ptag}>planet, active communities and an</p>
+                <p className={styles.ptag}>equal playing field for all.</p>
               </div>
-              <div className={styles.login}>Log in</div>
             </div>
           </div>
           <div className={styles.right}>
             <img
               className={styles.rightimg}
-              src="./img/swooshnike.png"
+              src="./img/whiteswoosh.png"
               alt="airdior"
             />
           </div>
