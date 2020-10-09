@@ -13,12 +13,14 @@ const BodyDunk = props => {
   });
   const handleScroll = e => {
     const scrollTop = ("scroll", e.srcElement.scrollingElement.scrollTop);
-    if (scrollTop > 670) {
+    console.log(scrollTop);
+    if (scrollTop > 800) {
       setResponse({ turnOn: true });
-    } else if (scrollTop < 670) {
+    } else if (scrollTop < 800) {
       setResponse({ turnOn: false });
     }
   };
+
   return (
     <>
       <div className={styles.body}>

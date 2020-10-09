@@ -3,8 +3,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import styles from "./app.module.css";
 import Main from "./components/home/main/main";
 import Login from "./components/login/login";
-import Dunk from "./components/Dunk/dunk";
-import Jordan1 from "./components/Jordan1/jordan1";
+import Dunk from "./components/dunk/dunk";
+import Jordan1 from "./components/jordan1/jordan1";
+import Entertainment from "./components/entertainment/entermain/entertainment";
 
 function App({ authService }) {
   return (
@@ -22,6 +23,9 @@ function App({ authService }) {
           </Route>
           <Route exact path="/dunk">
             <Dunk authService={authService} />
+          </Route>
+          <Route exact path="/entertainment">
+            <Entertainment authService={authService} />
           </Route>
         </Switch>
       </BrowserRouter>
