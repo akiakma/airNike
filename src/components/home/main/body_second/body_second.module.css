@@ -14,6 +14,7 @@
   background-color: makerBlack;
   height: 45rem;
 }
+
 .atag {
   font-family: "nation nale bold";
   display: inline-block;
@@ -34,6 +35,7 @@
   justify-content: space-around;
   align-items: center;
 }
+
 .left {
   height: 50%;
 }

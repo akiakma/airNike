@@ -2,12 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "./body_second.module.css";
 
 const BodySecond = props => {
-  const [scroll, setScroll] = useState({
-    movePX: 0,
-    toplineOn: false,
-    bottomlineOn: false,
-    textlineOn: false,
-  });
   const [response, setResponse] = useState({
     turnOn: false,
   });
@@ -21,14 +15,9 @@ const BodySecond = props => {
   const handleScroll = e => {
     const scrollTop = ("scroll", e.srcElement.scrollingElement.scrollTop);
     if (scrollTop > 240) {
-      // setScroll({ toplineOn: true });
-      // setScroll({ bottomlineOn: true });
-      // setScroll({ textlineOn: true });
       setResponse({ turnOn: true });
     } else if (scrollTop < 240) {
       setResponse({ turnOn: false });
-      // setScroll({ bottomlineOn: false });
-      // setScroll({ textlineOn: false });
     }
   };
   return (
