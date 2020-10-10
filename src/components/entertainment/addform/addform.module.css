@@ -1,5 +1,10 @@
 @value makerBlack, makerWhite from '../../common/colors.css';
-
+::placeholder {
+  color: rgba(255, 255, 255, 0.705);
+}
+::selection {
+  color: rgba(255, 255, 255, 0.705);
+}
 .form {
   display: flex;
   width: 100%;
@@ -12,13 +17,19 @@
 .input,
 .textarea,
 .select {
+  color: black;
   font-size: 0.8rem;
   width: 100%;
   border: 0;
   padding: 0.5em;
   border-bottom: 1px solid makerBlack;
   border-right: 1px solid makerBlack;
-  background: makerWhite;
+  background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+}
+
+.input,
+.select {
+  flex: 1 1 30%;
 }
 
 .input:focus,
@@ -32,5 +43,6 @@
   flex-basis: 100%;
 }
 .button {
+  display: flex;
   width: 100%;
 }

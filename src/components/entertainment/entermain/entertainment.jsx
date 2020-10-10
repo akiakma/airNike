@@ -4,7 +4,7 @@ import Nav from "../../nav/nav";
 import Maker from "../maker/maker";
 import Preview from "../preview/preview";
 
-const Entertainment = props => {
+const Entertainment = ({ authService, FileInput }) => {
   const [cards, setCards] = useState({
     1: {
       id: "1",
@@ -15,6 +15,7 @@ const Entertainment = props => {
       resale: "$1900",
       howtoget: "resale",
       message: "just do it",
+      fileName: "scott",
       fileURL: "https://i.postimg.cc/G2zFQZvP/TRAVISSCOTT.png",
     },
     2: {
@@ -26,6 +27,7 @@ const Entertainment = props => {
       resale: "$1200",
       howtoget: "retail",
       message: "just do it",
+      fileName: "scott",
       fileURL: "https://i.postimg.cc/1RC0N1ms/STRANGELOVE.png",
     },
     3: {
@@ -37,6 +39,7 @@ const Entertainment = props => {
       resale: "$700",
       howtoget: "resail",
       message: "just do it",
+      fileName: "scott",
       fileURL: null,
     },
   });
@@ -57,9 +60,10 @@ const Entertainment = props => {
   };
   return (
     <section className={styles.maker}>
-      <Nav />
+      <Nav authService={authService} />
       <div className={styles.container}>
         <Maker
+          FileInput={FileInput}
           cards={cards}
           addcard={createOrUpdateCard}
           updateCard={createOrUpdateCard}

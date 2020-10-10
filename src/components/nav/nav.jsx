@@ -29,13 +29,7 @@ const Nav = ({ authService }) => {
     authService.logOut();
     history.push("/");
   };
-  // useEffect(() => {
-  //   authService.onAuthChange(user => {
-  //     if (!user) {
-  //       history.push("/");
-  //     }
-  //   });
-  // });
+
   const [logo, setLogo] = useState("/img/logo_white.png");
   const [isHome, setIsHome] = useState(false);
   const [isJordan, setIsJordan] = useState(false);
@@ -47,7 +41,7 @@ const Nav = ({ authService }) => {
       setLogo("/img/logo_white.png");
     } else if (history.location.pathname === "/jordan1") {
       setIsJordan(true);
-      setLogo("/img/wingjordan.png");
+      setLogo("/img/logo_white.png");
     } else if (history.location.pathname === "/dunk") {
       setIsDunk(true);
       setLogo("https://www.nikesb.com/icons/nav/logo_nikesb_White.svg");

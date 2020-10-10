@@ -2,10 +2,10 @@ import React from "react";
 import Nav from "../nav/nav";
 import styles from "./jordan1.module.css";
 
-const Jordan1 = props => {
+const Jordan1 = ({ authService }) => {
   return (
     <>
-      <Nav />
+      <Nav authService={authService} />
     </>
   );
 };

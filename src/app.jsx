@@ -7,7 +7,7 @@ import Dunk from "./components/dunk/dunk";
 import Jordan1 from "./components/jordan1/jordan1";
 import Entertainment from "./components/entertainment/entermain/entertainment";
 
-function App({ authService }) {
+function App({ authService, FileInput }) {
   return (
     <div className={styles.app}>
       <BrowserRouter>
@@ -25,7 +25,7 @@ function App({ authService }) {
             <Dunk authService={authService} />
           </Route>
           <Route exact path="/entertainment">
-            <Entertainment authService={authService} />
+            <Entertainment FileInput={FileInput} authService={authService} />
           </Route>
         </Switch>
       </BrowserRouter>

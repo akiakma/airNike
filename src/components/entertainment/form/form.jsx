@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import styles from "./form.module.css";
 import Button from "../button/button";
-import ImageFileInput from "../image_file_input/image_file_input";
 
-const Form = ({ cards, updateCard, deleteCard }) => {
+const Form = ({ cards, updateCard, deleteCard, FileInput }) => {
   const nameRef = useRef();
   const brandRef = useRef();
   const typeRef = useRef();
@@ -20,9 +19,17 @@ const Form = ({ cards, updateCard, deleteCard }) => {
     resale,
     howtoget,
     message,
+    fileName,
     fileURL,
   } = cards;
 
+  const onFileChange = file => {
+    updateCard({
+      ...cards,
+      fileName: file.name,
+      fileURL: file.url,
+    });
+  };
   const onChange = event => {
     if (event.currentTarget == null) {
       return;
@@ -37,11 +44,11 @@ const Form = ({ cards, updateCard, deleteCard }) => {
   const onSubmit = event => {
     deleteCard(cards);
   };
-  console.log(cards);
+
   return (
     <form className={styles.form}>
       <input
-        className={styles.input}
+        className={`${styles.input} ${getStyles(type)}`}
         type="text"
         name="name"
         value={name}
@@ -49,7 +56,7 @@ const Form = ({ cards, updateCard, deleteCard }) => {
         ref={nameRef}
       />
       <select
-        className={styles.select}
+        className={`${styles.select} ${getStyles(type)}`}
         name="brand"
         value={brand}
         onChange={onChange}
@@ -59,7 +66,7 @@ const Form = ({ cards, updateCard, deleteCard }) => {
         <option value="Dunk">Dunk</option>
       </select>
       <select
-        className={styles.select}
+        className={`${styles.select} ${getStyles(type)}`}
         name="type"
         value={type}
         onChange={onChange}
@@ -70,7 +77,7 @@ const Form = ({ cards, updateCard, deleteCard }) => {
         <option value="gold">gold</option>
       </select>
       <input
-        className={styles.input}
+        className={`${styles.input} ${getStyles(type)}`}
         type="text"
         name="retail"
         value={retail}
@@ -78,7 +85,7 @@ const Form = ({ cards, updateCard, deleteCard }) => {
         ref={retailRef}
       />
       <input
-        className={styles.input}
+        className={`${styles.input} ${getStyles(type)}`}
         type="text"
         name="resale"
         value={resale}
@@ -86,7 +93,7 @@ const Form = ({ cards, updateCard, deleteCard }) => {
         ref={resaleRef}
       />
       <select
-        className={styles.select}
+        className={`${styles.select} ${getStyles(type)}`}
         name="howtoget"
         value={howtoget}
         onChange={onChange}
@@ -96,18 +103,29 @@ const Form = ({ cards, updateCard, deleteCard }) => {
         <option value="resale">resale</option>
       </select>
       <textarea
-        className={styles.textarea}
+        className={`${styles.textarea} ${getStyles(type)}`}
         name="message"
         value={message}
         onChange={onChange}
         ref={messageRef}
       ></textarea>
       <div className={styles.button}>
-        <ImageFileInput />
-        <Button name="Delete" onClick={onSubmit} />
+        <FileInput name={fileName} onFileChange={onFileChange} />
+        <Button cards={cards.type} name="Delete" onClick={onSubmit} />
       </div>
     </form>
   );
 };
-
+function getStyles(type) {
+  switch (type) {
+    case "bronze":
+      return styles.bronze;
+    case "silver":
+      return styles.silver;
+    case "gold":
+      return styles.gold;
+    // default:
+    //   throw new Error(`unknown theme: ${type}`);
+  }
+}
 export default Form;

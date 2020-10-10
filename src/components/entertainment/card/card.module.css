@@ -12,7 +12,7 @@
   height: 10em;
 }
 .card.bronze {
-  background: linear-gradient(to bottom, #3b230b 0%, #690f0f 100%);
+  background: linear-gradient(to bottom, #3b230b 0%, #c23737 100%);
   color: makerWhite;
 }
 .card.silver {

@@ -16,9 +16,49 @@
   width: 100%;
   border: 0;
   padding: 0.5em;
+  border: none;
   border-bottom: 1px solid makerBlack;
   border-right: 1px solid makerBlack;
-  background: makerWhite;
+  background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+}
+.input.bronze,
+.textarea.bronze,
+.select.bronze {
+  background: linear-gradient(to bottom, #3b230b 0%, #c23737 100%);
+}
+.input.silver,
+.textarea.silver,
+.select.silver {
+  background: rgb(241, 239, 239);
+  background: linear-gradient(
+    119deg,
+    rgba(241, 239, 239, 1) 2%,
+    rgba(232, 232, 232, 1) 10%,
+    rgba(255, 255, 255, 1) 17%,
+    rgba(223, 222, 222, 1) 29%,
+    rgba(133, 133, 133, 1) 63%,
+    rgba(133, 133, 133, 1) 66%,
+    rgba(133, 133, 133, 1) 82%,
+    rgba(223, 223, 223, 1) 100%,
+    rgba(133, 133, 133, 1) 100%
+  );
+}
+.input.gold,
+.textarea.gold,
+.select.gold {
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fdb931 0%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
 }
 
 .input,
@@ -38,5 +78,6 @@
 }
 
 .button {
+  display: flex;
   width: 100%;
 }

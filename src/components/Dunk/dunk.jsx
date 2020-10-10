@@ -2,10 +2,10 @@ import React from "react";
 import Nav from "../nav/nav";
 import styles from "./dunk.module.css";
 
-const Dunk = props => {
+const Dunk = ({ authService }) => {
   return (
     <>
-      <Nav />
+      <Nav authService={authService} />
       <div className={styles.div}>
         <div className={styles.card}>
           <img

@@ -2,11 +2,13 @@
 @value makerWhite from '../../common/colors.css';
 
 .maker {
+  min-height: 100vh;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: grey;
+  background: linear-gradient(215deg, #171d26 15%, #000 85%) no-repeat center
+    center fixed;
 }
 
 .container {
