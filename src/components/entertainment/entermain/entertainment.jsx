@@ -44,7 +44,7 @@ const Entertainment = ({ authService, FileInput, cardRepository }) => {
       if (user) {
         setUserId(user.uid);
       } else {
-        history.push("/");
+        history.push("/airNike");
       }
     });
   });

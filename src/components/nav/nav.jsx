@@ -38,9 +38,9 @@ const Nav = ({ authService }) => {
   const [isDunk, setIsDunk] = useState(false);
   const [isEntertainment, setIsEntertainment] = useState(false);
   useEffect(() => {
-    if (history.location.pathname === "/") {
+    if (history.location.pathname === "/airNike") {
       setIsHome(true);
-      setLogo("/img/logo_white.png");
+      setLogo("https://i.postimg.cc/h4Ntz9Nn/logo-white.png");
     } else if (history.location.pathname === "/jordan1") {
       setIsJordan(true);
       setLogo("/img/logo_white.png");
