@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f8c58bad5fe46c198504c2f810b12beb",
+    "revision": "c20859f6a549a5642006eff65425669c",
     "url": "/airNike/index.html"
   },
   {
-    "revision": "130d831170736cdfe4de",
+    "revision": "0c968d6d323c44b69e0e",
     "url": "/airNike/static/css/main.930afb80.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/airNike/static/js/2.ae17b4c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "130d831170736cdfe4de",
-    "url": "/airNike/static/js/main.81d5b957.chunk.js"
+    "revision": "0c968d6d323c44b69e0e",
+    "url": "/airNike/static/js/main.f6c99cd7.chunk.js"
   },
   {
     "revision": "05f2d43335fad4d75ff6",

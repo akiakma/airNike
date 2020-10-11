@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/airNike/precache-manifest.31ff45b2b0a4826ee2b9b167477913ec.js"
+  "/airNike/precache-manifest.6f0f893c2d9f2595ee1237b3d0309fd9.js"
 );
 
 self.addEventListener('message', (event) => {
