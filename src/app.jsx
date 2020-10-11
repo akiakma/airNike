@@ -12,7 +12,7 @@ function App({ authService, FileInput, cardRepository }) {
     <div className={styles.app}>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/airNike">
             <Main authService={authService} />
           </Route>
           <Route exact path="/login">
