@@ -9,12 +9,14 @@ import BodyDunk from "./body_dunk/body_dunk";
 
 const Main = ({ authService }) => {
   return (
-    <div className={styles.main}>
+    <>
       <Nav authService={authService} />
-      <BodyFirst />
-      <BodySecond />
-      <BodyDunk />
-    </div>
+      <div className={styles.main}>
+        <BodyFirst />
+        <BodySecond />
+        <BodyDunk />
+      </div>
+    </>
   );
 };
 

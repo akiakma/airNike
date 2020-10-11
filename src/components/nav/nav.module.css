@@ -5,8 +5,10 @@
   background-color: makerBlack;
   display: flex;
   align-items: center;
-
   color: makerWhite;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 }
 .div {
   width: 100%;

@@ -15,7 +15,7 @@ const Maker = ({ cards, addcard, updateCard, deleteCard, FileInput }) => (
       />
     ))}
     <h1 className={styles.title}>Form</h1>
-    <AddForm FileInput={FileInput} onAdd={addcard} />
+    <AddForm cards={cards} FileInput={FileInput} onAdd={addcard} />
   </section>
 );
 

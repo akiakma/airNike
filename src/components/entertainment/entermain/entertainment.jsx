@@ -1,55 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./entertainment.module.css";
 import Nav from "../../nav/nav";
 import Maker from "../maker/maker";
 import Preview from "../preview/preview";
+import { useHistory } from "react-router-dom";
 
-const Entertainment = ({ authService, FileInput }) => {
-  const [cards, setCards] = useState({
-    1: {
-      id: "1",
-      name: "Scott",
-      brand: "Dunk",
-      type: "gold",
-      retail: "$120",
-      resale: "$1900",
-      howtoget: "resale",
-      message: "just do it",
-      fileName: "scott",
-      fileURL: "https://i.postimg.cc/G2zFQZvP/TRAVISSCOTT.png",
-    },
-    2: {
-      id: "2",
-      name: "StrangeLove",
-      brand: "Dunk",
-      type: "bronze",
-      retail: "$120",
-      resale: "$1200",
-      howtoget: "retail",
-      message: "just do it",
-      fileName: "scott",
-      fileURL: "https://i.postimg.cc/1RC0N1ms/STRANGELOVE.png",
-    },
-    3: {
-      id: "3",
-      name: "BUCK",
-      brand: "Dunk",
-      type: "silver",
-      retail: "$120",
-      resale: "$700",
-      howtoget: "resail",
-      message: "just do it",
-      fileName: "scott",
-      fileURL: null,
-    },
-  });
+const Entertainment = ({ authService, FileInput, cardRepository }) => {
+  const historyState = useHistory().state;
+  const history = useHistory();
+
+  const [cards, setCards] = useState({});
+  const [userId, setUserId] = useState(historyState && historyState.id);
   const createOrUpdateCard = card => {
     setCards(cards => {
       const updated = { ...cards };
       updated[card.id] = card;
       return updated;
     });
+    cardRepository.saveCard(userId, card);
   };
+  console.log(historyState);
 
   const deleteCard = card => {
     setCards(cards => {
@@ -57,21 +27,43 @@ const Entertainment = ({ authService, FileInput }) => {
       delete updated[card.id];
       return updated;
     });
+    cardRepository.removeCard(userId, card);
   };
+  useEffect(() => {
+    if (!userId) {
+      return;
+    }
+    const stopSync = cardRepository.syncCards(userId, cards => {
+      setCards(cards);
+    });
+    return () => stopSync();
+  }, [userId]);
+
+  useEffect(() => {
+    authService.onAuthChange(user => {
+      if (user) {
+        setUserId(user.uid);
+      } else {
+        history.push("/");
+      }
+    });
+  });
   return (
-    <section className={styles.maker}>
+    <>
       <Nav authService={authService} />
-      <div className={styles.container}>
-        <Maker
-          FileInput={FileInput}
-          cards={cards}
-          addcard={createOrUpdateCard}
-          updateCard={createOrUpdateCard}
-          deleteCard={deleteCard}
-        />
-        <Preview cards={cards} />
-      </div>
-    </section>
+      <section className={styles.maker}>
+        <div className={styles.container}>
+          <Maker
+            FileInput={FileInput}
+            cards={cards}
+            addcard={createOrUpdateCard}
+            updateCard={createOrUpdateCard}
+            deleteCard={deleteCard}
+          />
+          <Preview cards={cards} />
+        </div>
+      </section>
+    </>
   );
 };
 

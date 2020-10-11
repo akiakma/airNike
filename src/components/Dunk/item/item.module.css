@@ -1,0 +1,44 @@
+.img {
+  width: 20rem;
+}
+.container {
+  width: 30%;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  height: 5rem;
+  font-size: 1.7rem;
+  font-family: "nation nale bold";
+  margin-top: 1rem;
+  margin-bottom: -1.5rem;
+}
+.child {
+  height: 1.2rem;
+  width: 105%;
+  background-color: red;
+  margin-top: -1.22rem;
+}
+.line {
+  font-size: 1.3rem;
+  font-family: "nation nale demibold";
+}
+.date {
+  font-size: 1rem;
+  font-family: "nation nale regular";
+  margin-top: 0.5rem;
+}
+@media screen and (max-width: 63rem) {
+  .name {
+    font-size: 1.2rem;
+  }
+  .child {
+    background-color: transparent;
+  }
+  .line {
+    margin-top: -2rem;
+  }
+}

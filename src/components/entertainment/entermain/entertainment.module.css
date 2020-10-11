@@ -9,6 +9,7 @@
   flex-direction: column;
   background: linear-gradient(215deg, #171d26 15%, #000 85%) no-repeat center
     center fixed;
+  padding-top: 6rem;
 }
 
 .container {

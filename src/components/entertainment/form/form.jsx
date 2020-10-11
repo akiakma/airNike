@@ -110,7 +110,7 @@ const Form = ({ cards, updateCard, deleteCard, FileInput }) => {
         ref={messageRef}
       ></textarea>
       <div className={styles.button}>
-        <FileInput name={fileName} onFileChange={onFileChange} />
+        <FileInput cards={cards} name={fileName} onFileChange={onFileChange} />
         <Button cards={cards.type} name="Delete" onClick={onSubmit} />
       </div>
     </form>
