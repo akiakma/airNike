@@ -27,7 +27,7 @@ const Nav = ({ authService }) => {
     sessionStorage.removeItem("id");
     setTurn("1");
     authService.logOut();
-    history.push("/");
+    history.push("/airNike");
   };
 
   const [logo, setLogo] = useState(
