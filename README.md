@@ -51,6 +51,8 @@ Entertainment는 카드를 만들 수 있는 페이지인데, form에 구입한 
 
 •	PostCSS
 
+•	Responsive Web
+
 ### 어려웠던 점
 
 전 프로젝트들과 다르게 useState에 array가 아닌 object형식으로 저장을 했는데 처음에 그 부분이 달라 혼란이 있었습니다. 다른것보다 가장 어려웠던 점은 API들을 이용하는것이었는데, firebase나 cloudinary에서 제공하는 문서들을 읽는데 상당한 어려움이 있었습니다. 해보고나니 백엔드가 있을때 fetch를 이용하는것과 별 다를게 없는것 같다고 느꼈습니다. google auth나 github auth를 통한 로그인 구현, 실시간 데이터전송이 가장 어려웠던 것같습니다.
