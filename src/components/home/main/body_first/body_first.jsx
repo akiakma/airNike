@@ -20,8 +20,8 @@ const BodyFirst = props => {
           <div className={styles.right}>
             <img
               className={styles.rightimg}
-              src="./img/whiteswoosh.png"
-              alt="airdior"
+              src="https://i.postimg.cc/h40qgVgM/whiteswoosh.png"
+              alt="nikeswoosh"
             />
           </div>
         </div>

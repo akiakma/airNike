@@ -8,7 +8,7 @@ const Login = ({ authService }) => {
   const loggedIn = userId => {
     sessionStorage.setItem("id", userId);
     history.push({
-      pathname: "/",
+      pathname: "/airNike",
       state: { id: userId },
     });
   };

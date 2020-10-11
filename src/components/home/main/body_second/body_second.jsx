@@ -52,7 +52,7 @@ const BodySecond = props => {
             <div className={styles.right}>
               <img
                 className={styles.rightimg}
-                src="./img/airdior1.png"
+                src="https://i.postimg.cc/wT3DHcLd/airdior1.png"
                 alt="airdior"
               />
             </div>

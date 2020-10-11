@@ -12,7 +12,7 @@ const Nav = ({ authService }) => {
     history.push("/login");
   };
   const goHome = () => {
-    history.push("/");
+    history.push("/airNike");
   };
   const goJordan1 = () => {
     history.push("/jordan1");
@@ -30,7 +30,9 @@ const Nav = ({ authService }) => {
     history.push("/");
   };
 
-  const [logo, setLogo] = useState("/img/logo_white.png");
+  const [logo, setLogo] = useState(
+    "https://i.postimg.cc/h4Ntz9Nn/logo-white.png"
+  );
   const [isHome, setIsHome] = useState(false);
   const [isJordan, setIsJordan] = useState(false);
   const [isDunk, setIsDunk] = useState(false);

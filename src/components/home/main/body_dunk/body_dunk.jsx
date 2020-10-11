@@ -30,35 +30,35 @@ const BodyDunk = props => {
               <div>
                 <img
                   className={styles.leftimg1}
-                  src="./img/scottdunk.png"
-                  alt="airdior"
+                  src="https://i.postimg.cc/VLLPN5kw/scottdunk.png"
+                  alt="scottdunk"
                 />
                 <img
                   className={styles.leftimg2}
-                  src="./img/chunky.png"
-                  alt="airdior"
+                  src="https://i.postimg.cc/CLPTnYRq/chunky.png"
+                  alt="chunkydunky"
                 />
                 <img
                   className={styles.leftimg3}
-                  src="./img/strangelove.png"
-                  alt="airdior"
+                  src="https://i.postimg.cc/sxGSP3Vg/strangelove.png"
+                  alt="strangelove"
                 />
               </div>
               <div>
                 <img
                   className={styles.leftimg4}
-                  src="./img/nikebox.png"
-                  alt="airdior"
+                  src="https://i.postimg.cc/NFbh4vbZ/nikebox.png"
+                  alt="box1"
                 />
                 <img
                   className={styles.leftimg5}
-                  src="./img/nikebox1.png"
-                  alt="airdior"
+                  src="https://i.postimg.cc/DZr3SXGv/nikebox1.png"
+                  alt="box2"
                 />
                 <img
                   className={styles.leftimg6}
-                  src="./img/nikebox2.png"
-                  alt="airdior"
+                  src="https://i.postimg.cc/T1TMg3jr/nikebox2.png"
+                  alt="box3"
                 />
               </div>
             </div>
