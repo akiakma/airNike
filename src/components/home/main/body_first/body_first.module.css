@@ -77,3 +77,31 @@
     -webkit-transform: rotate(0deg) translateY(0%) scale(1);
   }
 }
+
+@media screen and (max-width: 63rem) {
+  .ptag {
+    color: makerWhite;
+    font-size: 1.5rem;
+    font-family: "nation nale demibold";
+  }
+  .rightimg {
+    width: 20rem;
+    margin-right: 0rem;
+  }
+}
+@media screen and (max-width: 50rem) {
+  .background {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .ptag {
+    color: makerWhite;
+    font-size: 1.5rem;
+    font-family: "nation nale demibold";
+  }
+  .rightimg {
+    padding-top: 10rem;
+    width: 15rem;
+    margin-right: 0rem;
+  }
+}
