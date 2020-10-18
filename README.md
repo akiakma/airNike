@@ -15,7 +15,7 @@
 
 
 ### 구현
-
+![react](https://user-images.githubusercontent.com/56889320/96362028-5461d980-1165-11eb-8d0f-368bd562faeb.png)
 크게 나눠 Home, Jordan1, Dunk, Login, Entertainment라는 페이지가 존재합니다.
 Home에는 간략한 나이키 브랜드를 소개하고있고, Dunk에서는 나이키의 대표 스케이트화인 DunkSB를 소개하고있습니다.
 LOGIN을 하면 Entertainment라는 페이지가 나오는데, 로그인을 해야만 볼 수 있는 카테고리입니다.
