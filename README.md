@@ -62,6 +62,6 @@ Entertainment는 카드를 만들 수 있는 페이지인데, form에 구입한 
 
 
 ##영상 링크
-https://youtu.be/ql5YU-TBv70
+https://youtu.be/GsBLbnAt9lE
 
 
