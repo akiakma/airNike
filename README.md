@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+배포한 사이트는 아래의 주소에서 확인하실 수 있습니다. https://akiakma.github.io/airNike/
 
-## Available Scripts
+![airnikemain](https://user-images.githubusercontent.com/56889320/96362082-bde1e800-1165-11eb-96cf-89b927464311.png)
 
-In the project directory, you can run:
 
-### `yarn start`
+## AirNike(CardMaker & SearchList)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## 소개
 
-### `yarn test`
+2019년부터 스니커즈 리세일 시장이 엄청난 규모로 커지면서, 올해 스니커즈 중계 플랫폼들이 여러개 생겼습니다.
+중계 어플들은 스니커즈를 직접 정품,양품 검수를 통하여 구매자와 판매자를 연결해주고있습니다. 
+미국에서는 stockX나 Goat같은 유명한 중계 어플들이 예전부터 자리를 잡고있었지만, 한국에서는 그런 플랫폼이 존재하지않았고,
+현재 선두주자로 KREAM, XXBLUE, FROG등이 올해 생기면서, 시장 점유율을 높이기위해 서로 치열한 경쟁을 하고 있습니다.
+신발을 좋아하는 저로써는 이런 상황이 재밌게 느껴졌고, 나이키 스니커즈의 간략한 사진, 가격등의 정보들을 보여주고, 소유하고있는 
+신발의 카드를 만들어 그 카드에 구입가 가격을 적고, 현재 value가 얼마나 상승,하락했는지 보여주는 사이트를 간략하게 만들고자 하였습니다.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 구현
+![react](https://user-images.githubusercontent.com/56889320/96362028-5461d980-1165-11eb-8d0f-368bd562faeb.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+크게 나눠 Home, Jordan1, Dunk, Login, Entertainment라는 페이지가 존재합니다.
+Home에는 간략한 나이키 브랜드를 소개하고있고, Dunk에서는 나이키의 대표 스케이트화인 DunkSB를 소개하고있습니다.
+LOGIN을 하면 Entertainment라는 페이지가 나오는데, 로그인을 해야만 볼 수 있는 카테고리입니다.
+Entertainment는 카드를 만들 수 있는 페이지인데, form에 구입한 신발의 사진과 정보를 등록하면 서버와의 통신을 통해 서버에 저장이되고
+로그인 유저아이디를 통해서 그 기록들이 저장이 됩니다. 각각의 로그인 유저는 다른 유저의 카드를 볼 수 없습니다.
+로그인은 Firbase의 Authentication을 이용하였고, 이미지 업로드는 Cloudinary를 통해 업로드하여 Firbase를 통해 Realtime Databse를 구현했습니다.
+목적은 카드 등록을 통해 현재 내가 보유하고 있는 스니커즈의 value와 시장 value를 비교해줌으로써 그 가치가 상승했는지 하락했는지 간편히 볼수있는 것에 있습니다.
+아직 최종적인 구현은 하지 못한 상태이며 계속 수정 진행중입니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### 사용한 기술
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+•	React Hooks
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+•	Redux
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+•	useEffect
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+•	useHistory
 
-## Learn More
+•	ReactRouterDom
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+•	FirebaseAPI
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+•	Cloudinary
 
-### Code Splitting
+•	Dependency Injection
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+•	Postman
 
-### Analyzing the Bundle Size
+• Public APIs
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+•	Axios
 
-### Making a Progressive Web App
+•	Fetch
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+•	PostCSS
 
-### Advanced Configuration
+•	Responsive Web
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+##영상 링크
+https://youtu.be/GsBLbnAt9lE
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
