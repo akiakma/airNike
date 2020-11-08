@@ -1,0 +1,12 @@
+.div {
+  background-color: black;
+}
+.modal {
+  top: 10%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 300;
+  width: 70%;
+  height: 90%;
+}

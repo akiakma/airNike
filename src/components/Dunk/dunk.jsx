@@ -6,6 +6,9 @@ import List from "./list/list";
 import "@fortawesome/fontawesome-free/js/all.js";
 
 const Dunk = ({ authService }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [data, setData] = useState([
     {
       name: "Supreme Black Cement",
@@ -236,20 +239,18 @@ const Dunk = ({ authService }) => {
       value: 2000,
     },
   ]);
-  const list = [];
 
   const onChange = event => {
     const value = event.currentTarget.value;
     const result = data.filter(item => item.name.toLowerCase().includes(value));
     setInfo(result);
-    console.log("info", info);
   };
-
+  const imageUrl = "https://i.postimg.cc/x13f4B8j/sbbg.jpg";
   return (
     <>
       <Nav authService={authService} />
       <div className={styles.container}>
-        <Banner />
+        <Banner imageUrl={imageUrl} />
         <div className={styles.div} type="text">
           <div className={styles.searchlogo}>
             <i class="fas fa-search"></i>

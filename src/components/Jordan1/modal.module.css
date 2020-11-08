@@ -1,0 +1,39 @@
+.div {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: black;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.94);
+}
+.input {
+  display: inline-block;
+  width: 40%;
+}
+.imgDiv {
+  height: 100%;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+.img:hover {
+  cursor: col-resize;
+}
+.ptag {
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.description {
+  font-size: 1.2rem;
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.right {
+  width: 50%;
+}

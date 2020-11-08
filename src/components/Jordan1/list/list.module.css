@@ -1,0 +1,13 @@
+.container {
+  margin-top: 7rem;
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 63rem) {
+  .container {
+    flex-direction: column;
+  }
+}

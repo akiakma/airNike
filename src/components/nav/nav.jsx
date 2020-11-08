@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./nav.module.css";
 import { useHistory } from "react-router-dom";
 import classNames from "classnames/bind";
+import { useRef } from "react";
 const cx = classNames.bind(styles);
 
 const Nav = ({ authService }) => {
@@ -43,7 +44,7 @@ const Nav = ({ authService }) => {
       setLogo("https://i.postimg.cc/h4Ntz9Nn/logo-white.png");
     } else if (history.location.pathname === "/jordan1") {
       setIsJordan(true);
-      setLogo("/img/logo_white.png");
+      setLogo("https://i.postimg.cc/h4Ntz9Nn/logo-white.png");
     } else if (history.location.pathname === "/dunk") {
       setIsDunk(true);
       setLogo("https://www.nikesb.com/icons/nav/logo_nikesb_White.svg");
@@ -112,22 +113,3 @@ const Nav = ({ authService }) => {
 };
 
 export default Nav;
-
-// {
-//   <div className={styles.nav}>
-// <div className={styles.div}>
-//   <div className={styles.left}>
-//     <img
-//       className={styles.img}
-//       src="/img/logo_white.png"
-//       alt="nikelogo"
-//     />
-//     <div className={styles.leftDiv}>Home</div>
-//     <div className={styles.leftDiv}>Nike</div>
-//     <div className={styles.leftDiv}>Jordan 1</div>
-//     <div className={styles.leftDiv}>Dunk</div>
-//   </div>
-//   <div className={styles.right}>Log in</div>
-// </div>
-// </div>
-// }

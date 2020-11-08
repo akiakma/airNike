@@ -12,6 +12,7 @@ const AddForm = ({ cards, onAdd, FileInput }) => {
   const resaleRef = useRef();
   const howRef = useRef();
   const messageRef = useRef();
+  console.log("hello");
 
   const [file, setFile] = useState({
     fileName: null,

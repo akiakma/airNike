@@ -9,7 +9,7 @@ const Login = ({ authService }) => {
     sessionStorage.setItem("id", userId);
     history.push({
       pathname: "/airNike",
-      state: { id: userId },
+      // state: { id: userId },
     });
   };
   const onLogin = event => {

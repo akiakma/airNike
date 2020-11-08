@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./body_first.module.css";
 
-const BodyFirst = props => {
+const BodyFirst = ({ focusRef }) => {
   return (
     <>
-      <div className={styles.body}>
+      <div className={styles.body} ref={focusRef}>
         <div className={styles.background}>
           <div className={styles.left}>
             <div className={styles.leftdiv}>
